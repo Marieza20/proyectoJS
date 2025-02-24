@@ -6,6 +6,11 @@ const registro = document.getElementById("registro");
 
 function validar() {
     if (user.value === "" && password.value === "") {
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Ingresa un usuario y contraseña para registrarse",
+          });
         return false;
     }else{
         return true;
