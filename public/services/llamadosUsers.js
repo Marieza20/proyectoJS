@@ -23,10 +23,12 @@ export { getUsers };
 
 
 //////////LLAMADO POST//////////
-async function postUsers(user,password,typeUser) {
+async function postUsers(user,sede,codigo,password,typeUser) {
     try {
         const userData = { 
             user,
+            sede,
+            codigo,
             password,
             typeUser
         };
@@ -48,15 +50,17 @@ async function postUsers(user,password,typeUser) {
     }
 }
 
-export{postUsers}
+export{ postUsers }
 
 
 //////////////LLAMADO UPDATE/////////////
-async function updateUsers(user,password,id) 
+async function updateUsers(user,sede,codigo,password,id) 
 {
     try {
         const userData = { 
             user,
+            sede,
+            codigo,
             password,
         };
 
@@ -75,7 +79,7 @@ async function updateUsers(user,password,id)
     }
 }
 
-export{updateUsers}
+export{ updateUsers }
 
 
 //////////////LLAMADO DELETE/////////////

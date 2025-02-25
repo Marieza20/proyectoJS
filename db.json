@@ -1,15 +1,42 @@
 {
   "users": [
     {
-      "id": "3e53",
+      "id": "de44",
       "user": "mari",
+      "sede": "Puntarenas",
+      "codigo": "1Q66",
       "password": "1234",
-      "typeUser": "admin"
+      "typeUser": "est"
     },
     {
-      "id": "cf8e",
-      "user": "steven",
-      "password": "5678"
+      "id": "ef36",
+      "user": "juan",
+      "sede": "Desamparados",
+      "codigo": "jk45",
+      "password": "5678",
+      "typeUser": "est"
+    }
+  ],
+  "forms": [
+    {
+      "id": "719c",
+      "salida": "2025-02-24",
+      "entrega": "2025-02-26",
+      "acepto": "on",
+      "estado": "En espera",
+      "user": "juan",
+      "sede": "Desamparados",
+      "codigo": "jk45"
+    },
+    {
+      "id": "8766",
+      "salida": "2025-02-22",
+      "entrega": "2025-02-28",
+      "acepto": "on",
+      "estado": "En espera",
+      "user": "mari",
+      "sede": "Puntarenas",
+      "codigo": "1Q66"
     }
   ]
 }

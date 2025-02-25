@@ -20,22 +20,23 @@ function validar() {
 async function ingresar() {
     const datos = await getUsers();
     for (let index = 0; index < datos.length; index++) {
-        acceso.addEventListener("click",function(){            
+        acceso.addEventListener("click",function(){ 
             if (validar() === true) {
-                console.log("hola");
                 if (user.value === datos[index].user && password.value === datos[index].password){
+                    localStorage.setItem("user",user.value);
+                    localStorage.setItem("sede",datos[index].sede);
+                    localStorage.setItem("codigo",datos[index].codigo);
+                    Swal.fire({
+                        title: "Bienvenido",
+                        text: "x",
+                        icon: "success"
+                      });
                     if (datos[index].typeUser === "admin") {
                         window.location="inicioAdmin/inicio.html";
                     }else{
                         window.location="inicioEst/inicioEst.html";
                     }
-                }else{
-                    Swal.fire({
-                        title: "Oops...",
-                        text: "Usuario o contraseña incorrecta",
-                        icon: "error"
-                      });
-                }
+                }else{}
             }
         })
     }
