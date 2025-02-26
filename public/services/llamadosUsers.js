@@ -41,9 +41,7 @@ async function postUsers(user,sede,codigo,password,typeUser) {
             body: JSON.stringify(userData)
         });
 
-     
         return await response.json();
-
     } catch (error) {
         console.error('Error posting user:', error);
         throw error;

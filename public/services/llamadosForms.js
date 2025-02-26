@@ -43,10 +43,7 @@ async function postForms(salida,entrega,acepto,estado,user,sede,codigo) {
             body: JSON.stringify(formData)
         });
 
-     
         return await response.json();
-
-        
     } catch (error) {
         console.error('Error posting form:', error);
         throw error;
@@ -57,12 +54,17 @@ export{ postForms }
 
 
 //////////////LLAMADO UPDATE/////////////
-async function updateForms(salida,entrega,id) 
+async function updateForms(salida,entrega,acepto,estado,user,sede,codigo,id) 
 {
     try {
         const formData = { 
             salida,
-            entrega
+            entrega,
+            acepto,
+            estado,
+            user,
+            sede,
+            codigo
         };
 
         const response = await fetch("http://localhost:3001/forms/"+id, {

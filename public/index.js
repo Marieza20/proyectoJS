@@ -5,38 +5,33 @@ const password = document.getElementById("password");
 const acceso = document.getElementById("acceso");
 
 ingresar()
-function validar() {
-    if (user.value === "" && password.value === "") {
-        Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "Ingresa tu usuario y contraseña para acceder",
-          });
-        return false;
-    }else{
-        return true;
-    }
-}
 async function ingresar() {
     const datos = await getUsers();
-    for (let index = 0; index < datos.length; index++) {
+    for (let index = 0; index < datos.length; index++){
         acceso.addEventListener("click",function(){ 
-            if (validar() === true) {
+            if (user.value === "" && password.value === ""){
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Ingresa tu usuario y contraseña para acceder",
+                  });
+            }else{
                 if (user.value === datos[index].user && password.value === datos[index].password){
-                    localStorage.setItem("user",user.value);
-                    localStorage.setItem("sede",datos[index].sede);
-                    localStorage.setItem("codigo",datos[index].codigo);
-                    Swal.fire({
-                        title: "Bienvenido",
-                        text: "x",
-                        icon: "success"
-                      });
-                    if (datos[index].typeUser === "admin") {
-                        window.location="inicioAdmin/inicio.html";
-                    }else{
+                    if (datos[index].typeUser === "est") {
+                        localStorage.setItem("codigo",datos[index].codigo);
+                        localStorage.setItem("sede",datos[index].sede);
+                        localStorage.setItem("user",user.value);
                         window.location="inicioEst/inicioEst.html";
+                    }else{
+                        window.location="inicioAdmin/inicio.html";
                     }
-                }else{}
+                }else{
+                    Swal.fire({
+                        icon: "error",
+                        title: "Oops...",
+                        text: "Usuario o contraseña incorrectos",
+                      });
+                }
             }
         })
     }

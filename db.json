@@ -6,7 +6,7 @@
       "sede": "Puntarenas",
       "codigo": "1Q66",
       "password": "1234",
-      "typeUser": "est"
+      "typeUser": "admin"
     },
     {
       "id": "ef36",
@@ -14,6 +14,14 @@
       "sede": "Desamparados",
       "codigo": "jk45",
       "password": "5678",
+      "typeUser": "est"
+    },
+    {
+      "id": "c099",
+      "user": "Oliver",
+      "sede": "Puntarenas",
+      "codigo": "122g",
+      "password": "1111",
       "typeUser": "est"
     }
   ],
@@ -29,14 +37,34 @@
       "codigo": "jk45"
     },
     {
-      "id": "8766",
-      "salida": "2025-02-22",
-      "entrega": "2025-02-28",
+      "id": "d76d",
+      "salida": "2025-02-25",
+      "entrega": "2025-02-27",
       "acepto": "on",
       "estado": "En espera",
-      "user": "mari",
+      "user": "Oliver",
       "sede": "Puntarenas",
-      "codigo": "1Q66"
+      "codigo": "122g"
+    },
+    {
+      "id": "bf6b",
+      "salida": "2025-02-25",
+      "entrega": "2025-02-26",
+      "acepto": "on",
+      "estado": "En espera",
+      "user": "Oliver",
+      "sede": "Puntarenas",
+      "codigo": "122g"
+    },
+    {
+      "id": "c831",
+      "salida": "2025-02-20",
+      "entrega": "2025-02-27",
+      "acepto": "on",
+      "estado": "En espera",
+      "user": "Oliver",
+      "sede": "Puntarenas",
+      "codigo": "122g"
     }
   ]
 }
