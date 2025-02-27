@@ -3,29 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Solicitud de Permisos</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
+  <!--Nav-->
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid">
+        <!--Botón para desplegar menú-->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+        <!--Menú desplegable-->
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <!--Título-->
           <a class="navbar-brand" href="#">AVATAR</a>
+          <!--Lista del navegador-->
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="inicioEst.html">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="collapse" href="#multiCollapseExample1" aria-controls="multiCollapseExample1">Formulario</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#tabla">Registro</a>
-            </li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="inicioEst.html">Inicio</a></li>
+            <!--Despliega el formulario-->
+            <li class="nav-item"><a class="nav-link" data-bs-toggle="collapse" href="#multiCollapseExample1" aria-controls="multiCollapseExample1">Formulario</a></li>
+            <!--Lleva a la tabla que muestra las solicitudes-->
+            <li class="nav-item"><a class="nav-link" aria-current="page" href="#tabla">Solicitudes</a></li>
           </ul>
+          <!--Botón para cerrar sesión-->
           <div class="d flex">
             <a href="../index.html" class="btn btn-primary btn-sm" tabindex="-1" role="button">Cerrar Sesión</a>
           </div>
@@ -34,29 +36,37 @@
     </nav>
 
 
+    <!--Formulario-->
     <div class="container m-auto">
+      <!--Botón desplegable del formulario-->
       <p>
         <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Solicitar Uso de Computadora</a>
       </p>
       <div class=" row col">
+        <!--Formulario desplegable-->
         <div class="collapse multi-collapse" id="multiCollapseExample1">
           <div class="card card-body">
             <div class="row g-3">
+              <!--Input de la fecha que se lleva la compu-->
               <div class="col-md-6">
                 <label for="salida" class="form-label">Fecha de Salida</label>
                 <input type="date" class="form-control" id="salida">
               </div>
+              <!--Input de la fecha que devuelve la compu-->
               <div class="col-md-6">
                 <label for="entrega" class="form-label">Fecha de Entrega</label>
                 <input type="date" class="form-control" id="entrega">
               </div>
+              <!--Acordeon de los términos y condiciones-->
               <div class="accordion" id="accordionExample">
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="headingOne">
+                    <!--Botón del acordeón-->
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                       Términos y condiciones
                     </button>
                   </h2>
+                  <!--Arcordeón con la lista de términos y condiciones-->
                   <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                       <ul>
@@ -73,6 +83,7 @@
                 </div>
               </div>
               <div class="col-12">
+                <!--Input de checkbox aceptando términos y condiciones-->
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" id="acepto">
                   <label class="form-check-label" for="gridCheck">
@@ -80,6 +91,7 @@
                   </label>
                 </div>
               </div>
+              <!--Botón para enviar el formulario-->
               <div class="col-12">
                 <button type="submit" id="enviar" class="btn btn-primary">Enviar</button>
               </div>
@@ -90,24 +102,30 @@
     </div>
 
 
-    <table class="container m-auto table table-striped" id="tabla">
-        <thead>
-          <tr>
-            <th scope="col">Usuario</th>
-            <th scope="col">Sede</th>
-            <th scope="col">Fecha de Salida</th>
-            <th scope="col">Fecha de Entrega</th>
-            <th scope="col">Código de Laptop</th>
-            <th scope="col">Estado de Solicitud</th>
-            <th scope="col">Eliminar Solicitud</th>
-          </tr>
-        </thead>
-        <tbody id="mostrar">
-        </tbody>
+    <!--Tabla para mostrar datos de las solicitudes-->
+    <table class="container m-auto table table-striped table-hover" id="tabla">
+      <!--Títulos de la tabla-->
+      <thead>
+        <tr>
+          <th scope="col">Usuario</th>
+          <th scope="col">Sede</th>
+          <th scope="col">Fecha de Salida</th>
+          <th scope="col">Fecha de Entrega</th>
+          <th scope="col">Código de Laptop</th>
+          <th scope="col">Estado de Solicitud</th>
+          <th scope="col">Eliminar Solicitud</th>
+        </tr>
+      </thead>
+      <!--Cuerpo de la tabla generada con el js-->
+      <tbody id="mostrar">
+      </tbody>
     </table>
 
+    <!--Script JS-->
     <script type="module" src="inicioEst.js"></script>
+    <!--Script Sweet Alert-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--Script Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

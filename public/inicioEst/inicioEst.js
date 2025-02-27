@@ -42,7 +42,7 @@ enviar.addEventListener("click",function(){
 async function mostrarForms() {
     const datos = await getForms();
     for (let index = 0; index < datos.length; index++) {
-    if (datos[index].user === localStorage.getItem("user")) {
+        if (datos[index].user === localStorage.getItem("user")) {
             let tr = document.createElement("tr");
             let p1 = document.createElement("td");
             let p2 = document.createElement("td");
@@ -52,7 +52,7 @@ async function mostrarForms() {
             let p6 = document.createElement("td");
             let p7 = document.createElement("td");
             let eliminar = document.createElement("i");
-    
+
             p1.innerText = datos[index].user;
             p2.innerText = datos[index].sede;
             p3.innerText = datos[index].salida;
@@ -60,7 +60,7 @@ async function mostrarForms() {
             p5.innerText = datos[index].codigo;
             p6.innerHTML = datos[index].estado;
             eliminar.setAttribute("class","bx bx-trash");
-    
+
             mostrar.appendChild(tr);
             tr.appendChild(p1);
             tr.appendChild(p2);
@@ -72,8 +72,16 @@ async function mostrarForms() {
             tr.appendChild(p7);
         
             eliminar.addEventListener("click",function() {
-                deleteForms(datos[index].id);
-                location.reload();
+                Swal.fire({
+                    title: "¿Seguro que quieres eliminar la solicitud?",
+                    showCancelButton: true,
+                    confirmButtonText: "Sí",
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        deleteForms(datos[index].id);
+                        location.reload();
+                    }
+                });
             })
         }
     }

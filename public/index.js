@@ -1,7 +1,9 @@
 import { getUsers } from "./services/llamadosUsers.js";
 
+//Inputs del formulario
 const user = document.getElementById("user");
 const password = document.getElementById("password");
+//Botón para inciar sesión
 const acceso = document.getElementById("acceso");
 
 ingresar()
@@ -10,10 +12,10 @@ async function ingresar() {
     for (let index = 0; index < datos.length; index++){
         acceso.addEventListener("click",function(){ 
             if (user.value === "" && password.value === ""){
-                Swal.fire({
+                  Swal.fire({
+                    title: "Ingresa usuario y contraseña para acceder",
                     icon: "error",
-                    title: "Oops...",
-                    text: "Ingresa tu usuario y contraseña para acceder",
+                    draggable: true
                   });
             }else{
                 if (user.value === datos[index].user && password.value === datos[index].password){

@@ -1,6 +1,9 @@
 import { getForms,postForms,updateForms,deleteForms } from "../services/llamadosForms.js";
 
-mostrarForms()
+const buscarPalabra = document.getElementById("buscarPalabra");
+const buscar = document.getElementById("buscar");
+
+mostrarForms();
 async function mostrarForms(){
     const datos = await getForms();
     for (let index = 0; index < datos.length; index++) {
@@ -12,6 +15,7 @@ async function mostrarForms(){
         let p5 = document.createElement("td");
         let p6 = document.createElement("td");
         let p7 = document.createElement("td");
+        let p8 = document.createElement("td");
         let aprobar = document.createElement("i");
         let rechazar = document.createElement("i");
 
@@ -32,14 +36,23 @@ async function mostrarForms(){
         tr.appendChild(p5);
         tr.appendChild(p6);
         tr.appendChild(p7);
+        tr.appendChild(p8);
         p7.appendChild(aprobar);
-        p7.appendChild(rechazar);
+        p8.appendChild(rechazar);
 
         aprobar.addEventListener("click",function(){
             p6.textContent = "Aprobado";
-            updateForms(p6.value,datos[index].id);
-
-            //location.reload();
+            updateForms(p3.textContent,p4.textContent,"on",p6.textContent,p1.textContent,p2.textContent,p5.textContent,datos[index].id);
+        })
+        rechazar.addEventListener("click",function(){
+            p6.textContent = "Rechazado";
+            updateForms(p3.textContent,p4.textContent,"on",p6.textContent,p1.textContent,p2.textContent,p5.textContent,datos[index].id);
         })
     }
+
+    buscar.addEventListener("click",function(){
+        datos.filter(function() {
+            
+        })
+    })
 }

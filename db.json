@@ -23,48 +23,44 @@
       "codigo": "122g",
       "password": "1111",
       "typeUser": "est"
+    },
+    {
+      "id": "88c2",
+      "user": "steven",
+      "sede": "Puntarenas",
+      "codigo": "1Q68",
+      "password": "123",
+      "typeUser": "admin"
+    },
+    {
+      "id": "fd63",
+      "user": "jostin",
+      "sede": "Puntarenas",
+      "codigo": "334gh",
+      "password": "2222",
+      "typeUser": "est"
     }
   ],
   "forms": [
     {
-      "id": "719c",
-      "salida": "2025-02-24",
-      "entrega": "2025-02-26",
+      "salida": "2025-02-26",
+      "entrega": "2025-02-27",
       "acepto": "on",
-      "estado": "En espera",
+      "estado": "Aprobado",
       "user": "juan",
       "sede": "Desamparados",
-      "codigo": "jk45"
+      "codigo": "jk45",
+      "id": "09af"
     },
     {
-      "id": "d76d",
-      "salida": "2025-02-25",
-      "entrega": "2025-02-27",
-      "acepto": "on",
-      "estado": "En espera",
-      "user": "Oliver",
-      "sede": "Puntarenas",
-      "codigo": "122g"
-    },
-    {
-      "id": "bf6b",
-      "salida": "2025-02-25",
-      "entrega": "2025-02-26",
-      "acepto": "on",
-      "estado": "En espera",
-      "user": "Oliver",
-      "sede": "Puntarenas",
-      "codigo": "122g"
-    },
-    {
-      "id": "c831",
       "salida": "2025-02-20",
-      "entrega": "2025-02-27",
+      "entrega": "2025-02-21",
       "acepto": "on",
-      "estado": "En espera",
+      "estado": "Aprobado",
       "user": "Oliver",
       "sede": "Puntarenas",
-      "codigo": "122g"
+      "codigo": "122g",
+      "id": "a612"
     }
   ]
 }
