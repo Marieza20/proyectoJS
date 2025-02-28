@@ -81,7 +81,7 @@ export{ updateUsers }
 
 
 //////////////LLAMADO DELETE/////////////
-async function deleteUser(id) {
+async function deleteUsers(id) {
     try {
         const response = await fetch(`http://localhost:3001/users/${id}`, {
             method: 'DELETE',
@@ -101,4 +101,4 @@ async function deleteUser(id) {
     }
 }
 
-export { deleteUser };
+export { deleteUsers };

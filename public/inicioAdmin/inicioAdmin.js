@@ -51,8 +51,13 @@ async function mostrarForms(){
     }
 
     buscar.addEventListener("click",function(){
-        datos.filter(function() {
-            
+        datos.filter(function(){
+            if (datos[index].user === buscarPalabra.value) {
+                console.log("hola");
+                
+                let p = document.createElement("p");
+                p.innerHTML = datos[index].user
+            }
         })
     })
 }

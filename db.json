@@ -25,15 +25,7 @@
       "typeUser": "est"
     },
     {
-      "id": "88c2",
-      "user": "steven",
-      "sede": "Puntarenas",
-      "codigo": "1Q68",
-      "password": "123",
-      "typeUser": "admin"
-    },
-    {
-      "id": "fd63",
+      "id": "0f11",
       "user": "jostin",
       "sede": "Puntarenas",
       "codigo": "334gh",
@@ -61,6 +53,36 @@
       "sede": "Puntarenas",
       "codigo": "122g",
       "id": "a612"
+    },
+    {
+      "salida": "2025-02-27",
+      "entrega": "2025-02-28",
+      "acepto": "on",
+      "estado": "Rechazado",
+      "user": "jostin",
+      "sede": "Puntarenas",
+      "codigo": "334gh",
+      "id": "73ac"
+    },
+    {
+      "id": "7f0b",
+      "salida": "2025-02-20",
+      "entrega": "2025-02-22",
+      "acepto": "on",
+      "estado": "En espera",
+      "user": "jostin",
+      "sede": "Puntarenas",
+      "codigo": "334gh"
+    },
+    {
+      "id": "b589",
+      "salida": "2025-02-04",
+      "entrega": "2025-02-07",
+      "acepto": "on",
+      "estado": "En espera",
+      "user": "Oliver",
+      "sede": "Puntarenas",
+      "codigo": "122g"
     }
   ]
 }

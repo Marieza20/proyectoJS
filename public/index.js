@@ -19,13 +19,13 @@ async function ingresar() {
                   });
             }else{
                 if (user.value === datos[index].user && password.value === datos[index].password){
+                    localStorage.setItem("codigo",datos[index].codigo);
+                    localStorage.setItem("sede",datos[index].sede);
+                    localStorage.setItem("user",user.value);
                     if (datos[index].typeUser === "est") {
-                        localStorage.setItem("codigo",datos[index].codigo);
-                        localStorage.setItem("sede",datos[index].sede);
-                        localStorage.setItem("user",user.value);
                         window.location="inicioEst/inicioEst.html";
                     }else{
-                        window.location="inicioAdmin/inicio.html";
+                        window.location="inicioAdmin/inicioAdmin.html";
                     }
                 }else{
                     Swal.fire({
