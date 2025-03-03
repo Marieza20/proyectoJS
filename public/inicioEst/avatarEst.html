@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Información Personal</title>
+    <!--Link Boxicons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!--Link Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
@@ -31,8 +33,7 @@
         </div>
     </nav>
 
-
-
+    <!--Información del Usuario-->
     <div class="m-auto card w-50">
         <div class="card-header"><strong>Información Personal</strong></div>
         <ul class="list-group list-group-flush">
@@ -47,33 +48,39 @@
         </div>
     </div>
 
-    <!--Formulario para editar-->
-    <div class="container m-auto">
-        <div class=" row col">
-            <!--Formulario desplegable para editar-->
-            <div class="collapse multi-collapse" id="multiCollapseExample1">
-                <div class="card card-body">
-                    <div class="row g-3">
-                    <!--Input de la fecha que se lleva la compu-->
-                    <div class="col-md-6">
-                        <label for="salida" class="form-label">Fecha de Salida</label>
-                        <input type="date" class="form-control" id="salida">
-                    </div>
-                    <!--Input de la fecha que devuelve la compu-->
-                    <div class="col-md-6">
-                        <label for="entrega" class="form-label">Fecha de Entrega</label>
-                        <input type="date" class="form-control" id="entrega">
-                    </div>
-                    <!--Botón para enviar el formulario-->
-                    <div class="col-12">
-                        <button type="submit" id="enviar" class="btn btn-primary">Enviar</button>
-                    </div>
-                    </div>
+    <!--Formulario para editar usuario-->
+    <div class="collapse multi-collapse" id="multiCollapseExample1">
+        <form class="container w-50">
+            <div class="card card-body">
+                <h2>Editar Usuario</h2>
+                <!--Seleccionar la sede-->
+                <div class="mb-3">
+                    <label for="sede" class="form-label">Sede</label>
+                    <select class="form-select" id="sede" aria-label=".form-select-lg example">
+                        <option value="" selected>Elige la sede</option>
+                        <option value="Puntarenas">Puntarenas</option>
+                        <option value="Desamparados">Desamparados</option>
+                    </select>
+                </div>
+                <!--Insertar código de la pc-->
+                <div class="mb-3">
+                    <label for="codigo" class="form-label">Código de Laptop</label>
+                    <input type="text" class="form-control" id="codigo" required>
+                </div>
+                <!--Insertar contraseña-->
+                <label for="password" class="form-label">Contraseña:</label>
+                <div class="input-group mb-3">
+                    <input type="password" class="form-control" id="password">
+                    <button class="btn btn-outline-secondary" type="button"><i class="bx bx-low-vision" id="viewPassword"></i></button>
+                </div>
+                <!--Botón para guardar el registro-->
+                <div class="mb-3">
+                    <input class="btn btn-primary" type="button" id="actualizar" value="Actualizar">
                 </div>
             </div>
-        </div>
+        </form>
     </div>
-      
+    
 
     <!--Script JS-->
     <script type="module" src="avatarEst.js"></script>

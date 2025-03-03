@@ -1,12 +1,12 @@
 {
   "users": [
     {
-      "id": "de44",
       "user": "mari",
       "sede": "Puntarenas",
       "codigo": "1Q66",
       "password": "1234",
-      "typeUser": "admin"
+      "typeUser": "admin",
+      "id": "de44"
     },
     {
       "id": "ef36",
@@ -22,14 +22,6 @@
       "sede": "Puntarenas",
       "codigo": "122g",
       "password": "1111",
-      "typeUser": "est"
-    },
-    {
-      "id": "0f11",
-      "user": "jostin",
-      "sede": "Puntarenas",
-      "codigo": "334gh",
-      "password": "2222",
       "typeUser": "est"
     }
   ],
@@ -53,26 +45,6 @@
       "sede": "Puntarenas",
       "codigo": "122g",
       "id": "a612"
-    },
-    {
-      "salida": "2025-02-27",
-      "entrega": "2025-02-28",
-      "acepto": "on",
-      "estado": "Rechazado",
-      "user": "jostin",
-      "sede": "Puntarenas",
-      "codigo": "334gh",
-      "id": "73ac"
-    },
-    {
-      "id": "7f0b",
-      "salida": "2025-02-20",
-      "entrega": "2025-02-22",
-      "acepto": "on",
-      "estado": "En espera",
-      "user": "jostin",
-      "sede": "Puntarenas",
-      "codigo": "334gh"
     },
     {
       "id": "b589",

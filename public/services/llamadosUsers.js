@@ -52,7 +52,7 @@ export{ postUsers }
 
 
 //////////////LLAMADO UPDATE/////////////
-async function updateUsers(user,sede,codigo,password,id) 
+async function updateUsers(user,sede,codigo,password,typeUser,id) 
 {
     try {
         const userData = { 
@@ -60,6 +60,7 @@ async function updateUsers(user,sede,codigo,password,id)
             sede,
             codigo,
             password,
+            typeUser
         };
 
         const response = await fetch("http://localhost:3001/users/"+id, {
