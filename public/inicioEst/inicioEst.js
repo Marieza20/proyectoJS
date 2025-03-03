@@ -9,6 +9,11 @@ const acepto = document.getElementById("acepto");
 const enviar = document.getElementById("enviar");
 // Para imprimir datos
 const mostrar = document.getElementById("mostrar");
+// Para mostrar nombre de usuario en el nav
+const avatar = document.getElementById("avatar");
+
+// Muestra el nombre de usuario en el nav
+avatar.innerHTML = localStorage.getItem("user");
 
 // Invocar función para mostrar las solicitudes
 mostrarForms();
@@ -34,15 +39,19 @@ function validarCheckbox(){
 // Evento click del botón para crear solicitudes
 enviar.addEventListener("click",function(){
     // Valida los inputs y el checkbox
-    if (validar() === true && validarCheckbox() === true) {
-        // Trae los datos del login
-        let codigo = localStorage.getItem("codigo");
-        let sede = localStorage.getItem("sede");
-        let user = localStorage.getItem("user");
-        // Inserta la solicitud en el d.json
-        postForms(salida.value,entrega.value,acepto.value,"En espera",user,sede,codigo);
-        // Recarga la página
-        location.reload()
+    if (validar() === true && validarCheckbox() === true) {    
+        if (salida.value < entrega.value) {
+            // Trae los datos del login
+            let codigo = localStorage.getItem("codigo");
+            let sede = localStorage.getItem("sede");
+            let user = localStorage.getItem("user");
+            // Inserta la solicitud en el d.json
+            postForms(salida.value,entrega.value,acepto.value,"En espera",user,sede,codigo);
+            // Recarga la página
+            location.reload()
+        }else{
+            Swal.fire("La fecha de salida debe ser antes de la entrega");
+        }
     }
 })
 
@@ -77,9 +86,9 @@ async function mostrarForms() {
             tr.appendChild(p4);
             p5.appendChild(eliminar);
             tr.appendChild(p5);
-        
+
             // Evento click para eliminar solicitudes
-            eliminar.addEventListener("click",function() {
+            eliminar.addEventListener("click",function(){
                 // SweetAlert para confirmar
                 Swal.fire({
                     title: "¿Seguro que quieres eliminar la solicitud?",

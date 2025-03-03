@@ -15,6 +15,11 @@ const password = document.getElementById("password");
 const viewPassword = document.getElementById("viewPassword");
 // Botón para actualizar
 const actualizar = document.getElementById("actualizar");
+// Para mostrar nombre de usuario en el nav
+const avatar = document.getElementById("avatar");
+
+// Muestra el nombre de usuario en el nav
+avatar.innerHTML = localStorage.getItem("user");
 
 // Invocar función para mostrar el usuario
 mostrarUser();
@@ -30,6 +35,10 @@ viewPassword.addEventListener("click",function(){
         click = false
     }
 })
+
+function recargar() {
+    location.reload();
+}
 
 // Función para mostrar el usuario
 async function mostrarUser() {
@@ -64,10 +73,16 @@ async function mostrarUser() {
                 actualizar.addEventListener("click",function(){
                     // Actualiza datos del usuarios en el db.json
                     updateUsers(datos[index].user,sede.value,codigo.value,password.value,datos[index].typeUser,datos[index].id);
+                    // Actualiza datos en el localstorage
+                    localStorage.setItem("codigo",codigo.value);
+                    localStorage.setItem("sede",sede.value);
                     // Invocar función para actualizar datos de las solicitudes del usuario en el db.json
                     actualizarForm();
-                    // Recargar la página
-                    location.reload();
+                    Swal.fire({
+                        title: "Actualizado con exito!",
+                        icon: "success"
+                      });
+                    setTimeout(recargar, 1000);
                 })
             })
         }

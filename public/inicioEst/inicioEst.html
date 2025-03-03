@@ -20,7 +20,7 @@
       <!--Menú desplegable-->
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <!--Página del usuario-->
-        <a class="navbar-brand" href="avatarEst.html">AVATAR</a>
+        <a class="navbar-brand" href="avatarEst.html"><strong id="avatar"></strong></a>
         <!--Lista del navegador-->
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link active" aria-current="page" href="inicioEst.html">Inicio</a></li>
@@ -113,40 +113,12 @@
           <th scope="col">Fecha de Entrega</th>
           <th scope="col">Código de Laptop</th>
           <th scope="col">Estado de Solicitud</th>
-          <th scope="col">Eliminar Solicitud</th>
+          <th scope="col">Eliminar</th>
         </tr>
       </thead>
       <!--Cuerpo de la tabla generada con el js-->
-      <tbody id="mostrar">
-      </tbody>
+      <tbody id="mostrar"></tbody>
     </table>
-  </div>
-
-  <!--Formulario para editar-->
-  <div class="container m-auto">
-    <div class=" row col">
-        <!--Formulario desplegable para editar-->
-        <div class="collapse multi-collapse" id="multiCollapseExample1">
-            <div class="card card-body">
-                <div class="row g-3">
-                <!--Input de la fecha que se lleva la compu-->
-                <div class="col-md-6">
-                    <label for="salida" class="form-label">Fecha de Salida</label>
-                    <input type="date" class="form-control" id="salida">
-                </div>
-                <!--Input de la fecha que devuelve la compu-->
-                <div class="col-md-6">
-                    <label for="entrega" class="form-label">Fecha de Entrega</label>
-                    <input type="date" class="form-control" id="entrega">
-                </div>
-                <!--Botón para enviar el formulario-->
-                <div class="col-12">
-                    <button type="submit" id="enviar" class="btn btn-primary">Enviar</button>
-                </div>
-                </div>
-            </div>
-        </div>
-    </div>
   </div>
 
     <!--Script JS-->

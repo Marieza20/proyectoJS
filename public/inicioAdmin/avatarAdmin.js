@@ -15,6 +15,11 @@ const password = document.getElementById("password");
 const viewPassword = document.getElementById("viewPassword");
 // Botón para actualizar
 const actualizar = document.getElementById("actualizar");
+// Para mostrar nombre de usuario en el nav
+const avatar = document.getElementById("avatar");
+
+// Muestra el nombre de usuario en el nav
+avatar.innerHTML = localStorage.getItem("user");
 
 // Invocar función para mostrar el usuario
 mostrarUser();
@@ -65,6 +70,10 @@ async function mostrarUser() {
                 actualizar.addEventListener("click",function(){
                     // Actualiza datos del usuarios en el db.json
                     updateUsers(user.value,sede.value,codigo.value,password.value,datos[index].typeUser,datos[index].id);
+                    // Actualiza datos en el localstorage
+                    localStorage.setItem("codigo",codigo.value);
+                    localStorage.setItem("sede",sede.value);
+                    localStorage.setItem("user",user.value);
                     // Recargar la página
                     location.reload();
                 })

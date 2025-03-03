@@ -4,6 +4,11 @@ import { getForms,postForms,updateForms,deleteForms } from "../services/llamados
 const buscarPalabra = document.getElementById("buscarPalabra");
 // Botón para buscar
 const buscar = document.getElementById("buscar");
+// Para mostrar nombre de usuario en el nav
+const avatar = document.getElementById("avatar");
+
+// Muestra el nombre de usuario en el nav
+avatar.innerHTML = localStorage.getItem("user");
 
 // Invocar función para mostrar las solicitudes
 mostrarForms();

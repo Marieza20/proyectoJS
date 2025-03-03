@@ -9,12 +9,12 @@
       "id": "de44"
     },
     {
-      "id": "ef36",
       "user": "juan",
       "sede": "Desamparados",
-      "codigo": "jk45",
+      "codigo": "jk458",
       "password": "5678",
-      "typeUser": "est"
+      "typeUser": "est",
+      "id": "ef36"
     },
     {
       "id": "c099",
@@ -33,7 +33,7 @@
       "estado": "Aprobado",
       "user": "juan",
       "sede": "Desamparados",
-      "codigo": "jk45",
+      "codigo": "jk458",
       "id": "09af"
     },
     {
@@ -47,14 +47,44 @@
       "id": "a612"
     },
     {
-      "id": "b589",
       "salida": "2025-02-04",
       "entrega": "2025-02-07",
+      "acepto": "on",
+      "estado": "Rechazado",
+      "user": "Oliver",
+      "sede": "Puntarenas",
+      "codigo": "122g",
+      "id": "b589"
+    },
+    {
+      "salida": "2025-03-03",
+      "entrega": "2025-03-05",
+      "acepto": "on",
+      "estado": "Aprobado",
+      "user": "Oliver",
+      "sede": "Puntarenas",
+      "codigo": "122g",
+      "id": "29d4"
+    },
+    {
+      "id": "722c",
+      "salida": "2025-03-06",
+      "entrega": "2025-03-07",
       "acepto": "on",
       "estado": "En espera",
       "user": "Oliver",
       "sede": "Puntarenas",
       "codigo": "122g"
+    },
+    {
+      "salida": "2025-03-01",
+      "entrega": "2025-03-03",
+      "acepto": "on",
+      "estado": "Rechazado",
+      "user": "juan",
+      "sede": "Desamparados",
+      "codigo": "jk458",
+      "id": "2b3c"
     }
   ]
 }

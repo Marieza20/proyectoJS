@@ -12,6 +12,7 @@ momento de registrarse. Puede editar estos datos y se actualizan en el db.json, 
 eliminar el usuario, lo borra del db.json y lo redirige al inicio de sesión.
 
 La página de administradores es bastante similar, su página de inicio, no muestra el formulario pero
-tiene la tabla con todas las solicitudes realizadas por todos los estudiantes.
+tiene la tabla con todas las solicitudes realizadas por todos los estudiantes. Además, cuenta con un
+buscador que filtra la tabla según el dato buscado.
 También tiene acceso a la página de información personal, igualmente puede actualizar los datos
 y eliminar la cuenta.
